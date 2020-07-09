@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Font80.tres" type="DynamicFont" id=1]
+[ext_resource path="res://IntroScreen.gd" type="Script" id=2]
+
+[node name="IntroScreen" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_scale = Vector2( 25.6545, 15.0711 )
+color = Color( 0.309804, 0.439216, 0.662745, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="."]
+margin_left = 456.0
+margin_top = 32.0
+margin_right = 603.0
+margin_bottom = 251.0
+rect_scale = Vector2( 0.995796, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "
+Pong"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 467.0
+margin_top = 299.0
+margin_right = 591.0
+margin_bottom = 360.0
+text = "Play"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_down" from="Button" to="." method="_on_Button_button_down"]
